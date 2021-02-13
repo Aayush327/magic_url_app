@@ -19,7 +19,7 @@
                 $scope.newUrl = response.url;
 
             }, function (response) {
-                console.log(response);
+                alert('failed to create url');
             });
         };
 

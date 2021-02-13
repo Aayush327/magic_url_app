@@ -5,8 +5,6 @@
 
     function EndPointDetailController($scope, Restangular, $stateParams) {
 
-        console.log('pppppppppppp')
-
         let a = 'endpoints/test' + $stateParams.url;
         let latestUrlHits = function() {
             Restangular.service('').get(a).then(function (response) {

@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "angular-http-server": "^1.9.1",
+    "angular-route": "^1.8.2",
     "angular-ui-router": "^1.0.24",
     "lodash": "^4.17.20",
     "restangular": "^1.6.1"
