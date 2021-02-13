@@ -1,0 +1,18 @@
+{
+  "name": "magic_url_webapp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "angular-http-server -a localhost -p 5200"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "angular-http-server": "^1.9.1",
+    "angular-ui-router": "^1.0.24",
+    "lodash": "^4.17.20",
+    "restangular": "^1.6.1"
+  },
+  "description": ""
+}
