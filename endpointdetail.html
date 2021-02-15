@@ -1,7 +1,27 @@
-<div ng-app="MagicUrlApp">
-    <div ng-controller="EndPointDetailController">
-        kkkkkkkkkkkkkkkkkkkkkkkkkk
+<div class="container d-flex flex-column justify-content-center p-5">
+    <div class="d-flex p-2 my-3 px-3 bd-highlight background-gray w-100 justify-content-between align-items-center">
+        <p>{{url}}</p>
+        <div class="d-flex">
+            <div class="bg-warning m-0 px-3 rounded-pill">
+                Expires in {{time_after_hitting_url}} mins
+            </div>
+        </div>
     </div>
-</div>
-
-<h3>Article Detail Page</h3>
+    <div ng-repeat="detail in endPointDetailList">
+        <div class="d-flex p-2 px-3 my-3 bd-highlight background-gray w-100 justify-content-between">
+            <div class="d-flex flex-column" >
+                <p class="fs-4">Query Param</p>
+                <p class="mx-2">{{detail.query_params}}</p>
+                <p class="fs-4">Raw Body</p>
+                <p class="mx-2">{{detail.raw_body}}</p>
+                <p class="fs-4">Headers</p>
+                {{convertHeaders(detail.headers)}}
+                <p class="mt-2 mb-3" ng-repeat= "(key, value) in headers">
+                    {{key}}: {{value}}   
+                </p>
+                <div class="d-flex flex-column align-items-start">
+                    {{}}
+                </div>
+            </div>
+        </div>
+    </div>

@@ -1,12 +1,14 @@
 (function () {
     'use strict';
-    angular.module('MagicUrlApp').controller('IndexController', IndexController);
-    IndexController.$inject = ['$scope', 'Restangular'];
+    angular.module('MagicUrlApp').controller('HomeController', HomeController);
+    HomeController.$inject = ['$scope', 'Restangular'];
 
-    function IndexController($scope, Restangular) {
+    function HomeController($scope, Restangular) {
+
+        let endEndPointUrl = 'endpoints/url'
 
         let listActiveUrls = function() {
-            Restangular.service('').get('endpoints/url').then(function (response) {
+            Restangular.service('').get(endEndPointUrl).then(function (response) {
                 $scope.urlList = response.url_list;
             }, function (error) {
                 //error message to be filled
@@ -15,7 +17,7 @@
         }
 
         $scope.createUrl = function() {
-            Restangular.service('endpoints/url').post({}).then(function (response) {
+            Restangular.service(endEndPointUrl).post({}).then(function (response) {
                 $scope.newUrl = response.url;
 
             }, function (response) {
@@ -25,5 +27,4 @@
 
         listActiveUrls();
     }
-
 })();

@@ -2,50 +2,25 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <link href="./css/style.css" rel="stylesheet" />
     <title>Magic Url</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
     <script src="./node_modules/lodash/lodash.js"></script>
     <script src="./node_modules/angular/angular.js"></script>
     <script src="./node_modules/restangular/dist/restangular.min.js"></script>
     <script src="./node_modules/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="./node_modules/angular-route/angular-route.js"></script>
     <script src="app.js"></script>
-    <script src="index.controller.js"></script>
+    <script src="home.controller.js"></script>
     <script src="endpointdetail.controller.js"></script>
 </head>
 
 <body ng-app="MagicUrlApp">
-    <div>
-        <div ng-controller="IndexController"
-            class="container d-flex flex-column justify-content-center p-5 align-items-center">
-            <p class="fs-4">
-                Create new
-                <span class="text-danger"> HTTP </span>
-                endpoints to inspect the data in user friendly way!
-            </p>
-            <button type="button" class="btn btn-danger btn-lg m-4 px-5" ng-click="createUrl()">
-                + Create New
-            </button>
-            <div ng-if="newUrl" class=d-flex flex-column m-4 align-items-center>
-                Here is your new url: {{newUrl}} 
-            </div>
-            <ul class="list-unstyled mt-4 p-5">
-                <div ng-repeat='url in urlList'>
-                    <li class="d-flex flex-column m-4 align-items-center">
-                        <p>{{url.url}} ({{url.no_of_hits}})</p>
-                        <div class="bg-warning m-0 px-3 rounded-pill">
-                            Expiring in {{url.time_left_before_expiry}} minutes
-                        </div>
-                    </li>
-                </div>
-            </ul>
-        </div>
-    </div>
+    <div ui-view></div>
 </body>
 
 </html>

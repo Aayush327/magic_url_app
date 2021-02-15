@@ -11,15 +11,16 @@
             RestangularProvider.setBaseUrl("http://magic-url-api.herokuapp.com");
             RestangularProvider.setRequestSuffix('/');
             $stateProvider
-                .state('index', {
-                    url: '/',
-                    templateUrl: 'index.html'
+                .state('home', {
+                    url: '/home',
+                    templateUrl: 'home.html',
+                    controller: 'HomeController'
                 })
                 .state('endPointDetail', {
-                    url: '/:slow',
+                    url: '/test/:url',
                     templateUrl: 'endpointdetail.html',
-                    controller: 'EndPointDetailController',
+                    controller: 'EndPointDetailController'
                 })
-            $urlRouterProvider.otherwise('/');
+            $urlRouterProvider.otherwise('/home');
         }]);
 })();
