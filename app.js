@@ -8,7 +8,7 @@
         .config(['RestangularProvider', '$stateProvider', '$urlRouterProvider', function (
             RestangularProvider, $stateProvider, $urlRouterProvider
         ) {
-            RestangularProvider.setBaseUrl("http://magic-url-api.herokuapp.com");
+            RestangularProvider.setBaseUrl("http://localhost:8000");
             RestangularProvider.setRequestSuffix('/');
             $stateProvider
                 .state('home', {
