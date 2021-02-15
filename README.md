@@ -15,3 +15,10 @@ Step 5: Create package.json using below command
 
 Step 6: install dependencies
 "npm install"
+
+Step 7: npm start
+
+# Urls
+
+1 - /home
+2 - /test/<url>
